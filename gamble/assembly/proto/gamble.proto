@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package gamble;
+
+import "koinos/options.proto"; 
+
+// @description Flip a coin
+// @read-only false
+message flip_arguments {
+  bytes address = 1 [(koinos.btype) = ADDRESS];
+  uint64 wager = 2 [jstype = JS_STRING];
+  bool heads = 3;
+}
+
+message flip_result {}
